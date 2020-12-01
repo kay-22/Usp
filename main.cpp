@@ -1,12 +1,14 @@
-#include "SDL2/SDL.h"
+#include "basics/CApp.h"
 
 int main( int argc, char* args[] )
 {
-    //Start SDL
-    SDL_Init( SDL_INIT_EVERYTHING );
+    CApp theApp;
+ 
+    // //Start SDL
+    // SDL_Init( SDL_INIT_EVERYTHING );
     
-    //Quit SDL
-    SDL_Quit();
+    // //Quit SDL
+    // SDL_Quit();
     
-    return 0;    
+    return theApp.OnExecute();;    
 }
