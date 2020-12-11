@@ -1,6 +1,11 @@
 #include "basics/CApp.h"
+#include <iostream>
 
-int main( int argc, char* args[] )
+using std::cerr;
+using std::endl;
+using std::cout;
+
+int main( int argc, char** argv )
 {
     CApp theApp;
  
@@ -9,6 +14,7 @@ int main( int argc, char* args[] )
     
     // //Quit SDL
     // SDL_Quit();
-    
-    return theApp.OnExecute();;    
+    int exit = theApp.OnExecute();
+
+    return exit;   
 }
