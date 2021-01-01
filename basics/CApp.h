@@ -12,6 +12,7 @@ class CApp {
         SDL_Renderer* renderer = nullptr;
         SDL_Texture* image = nullptr;
         SDL_Rect image_rec;
+        bool keys_state[4] = {0};
  
     public:
         CApp();
