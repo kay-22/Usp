@@ -1,9 +1,10 @@
 #include "CApp.h"
 
 using std::cerr;
+using std::cout;
 using std::endl;
 
-static const char STEP = 7;
+static const char STEP = 1;
 static const bool KEY_DOWN = true;
 static void updateKeyboard(bool* keys_state, SDL_Keycode key, bool state);
 static void moveRect(SDL_Rect& rect, bool* keys_state);
@@ -80,11 +81,10 @@ void CApp::OnEvent(SDL_Event* Event) {
     else if (Event->type == SDL_KEYUP) {
         updateKeyboard(keys_state, Event->key.keysym.sym, !KEY_DOWN);
     }
-
-    moveRect(image_rec, keys_state);
 }
 
 void CApp::OnLoop() {
+    moveRect(image_rec, keys_state);
 }
 
 void CApp::OnRender() {
